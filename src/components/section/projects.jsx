@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import ProjectItem from "./projects/projectItem";
 
 const Projectos = [
@@ -53,25 +54,10 @@ const Projects = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container justifyContent={"center"} spacing={2}>
-          {Projectos.map((item) => (
-            <Grid item /*xs={0} sm={6} md={2} key={item.id}*/>
-              <ProjectItem
-                title={item.title}
-                description={item.description}
-                image={item.image}
-              />
-            </Grid>
-          ))}
-        </Grid>
-        {/* <Box paddingTop={2}>
-          <Grid
-            container
-            spacing={{ xs: 1, md: 3 }}
-            columns={{ xs: 2, sm: 12, md: 8 }}
-          >
+        <Container>
+          <Grid container justifyContent={"center"} spacing={2}>
             {Projectos.map((item) => (
-              <Grid item xs={0} sm={6} md={2} key={item.id}>
+              <Grid item key={item.id}>
                 <ProjectItem
                   title={item.title}
                   description={item.description}
@@ -80,7 +66,7 @@ const Projects = () => {
               </Grid>
             ))}
           </Grid>
-        </Box> */}
+        </Container>
       </Box>
     </>
   );

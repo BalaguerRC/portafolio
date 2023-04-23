@@ -1,6 +1,6 @@
+/* eslint-disable no-dupe-keys */
 import {
   AppBar,
-  Avatar,
   Box,
   Button,
   Container,
@@ -8,33 +8,29 @@ import {
   Menu,
   MenuItem,
   Toolbar,
-  Tooltip,
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
+  //const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+  /*const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
+  };*/
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  /*const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-  };
+  };*/
 
   //5390FF
   return (
@@ -99,7 +95,7 @@ const Header = () => {
                   <Typography textAlign="center">Proyectos</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Sobre mi</Typography>
+                  <Typography textAlign="center">Contacto</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -133,7 +129,6 @@ const Header = () => {
                 href={"#resumen"}
                 sx={{
                   my: 2,
-                  color: "white",
                   display: "block",
                   color: "#81CC96",
                 }}
@@ -145,7 +140,6 @@ const Header = () => {
                 href="#skills"
                 sx={{
                   my: 2,
-                  color: "white",
                   display: "block",
                   color: "#81CC96",
                 }}
@@ -157,7 +151,6 @@ const Header = () => {
                 href="#projects"
                 sx={{
                   my: 2,
-                  color: "white",
                   display: "block",
                   color: "#81CC96",
                 }}
@@ -169,12 +162,11 @@ const Header = () => {
                 href="#about"
                 sx={{
                   my: 2,
-                  color: "white",
                   display: "block",
                   color: "#81CC96",
                 }}
               >
-                Sobre mi
+                Contacto
               </Button>
             </Box>
           </Toolbar>

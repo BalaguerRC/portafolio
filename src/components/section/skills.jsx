@@ -1,21 +1,16 @@
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import {
-  Avatar,
-  Box,
-  Button,
-  CardMedia,
-  CircularProgress,
-  Grid,
-  ListItemIcon,
-  MenuItem,
-  Paper,
-  Typography,
-} from "@mui/material";
+  PaperCustom,
+  StyledBadgeBasic,
+  StyledBadgeAdvanced,
+  StyledBadgeIntermediate,
+} from "./style/skills";
 
 const Skills = () => {
   return (
     <>
-      <Box sx={{ pt: 15, pb: 15, pr: 5, pl: 5, background: "#1D2433" }}>
-        <Grid container direction={"column"} alignItems={"center"}>
+      <Box sx={{ pt: 15, pb: 15, pr: 10, pl: 10, background: "#1D2433" }}>
+        <Grid container direction={"column"} alignItems={"center"}  textAlign={"center"}>
           <Grid item>
             <Typography variant="h4" gutterBottom>
               Skills
@@ -28,157 +23,151 @@ const Skills = () => {
               et a id nisi.
             </Typography>
           </Grid>
+          <Grid item>
+            <Paper
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                p: 1,
+                borderRadius: 10,
+              }}
+            >
+              <Box>
+                <StyledBadgeBasic
+                  overlap="circular"
+                  variant="dot"
+                  sx={{ pl: 1 }}
+                ></StyledBadgeBasic>
+                <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
+                  Basico
+                </Typography>
+              </Box>
+              <Box>
+                <StyledBadgeIntermediate
+                  overlap="circular"
+                  variant="dot"
+                  sx={{ pl: 1 }}
+                ></StyledBadgeIntermediate>
+                <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
+                  Intermedio
+                </Typography>
+              </Box>
+              <Box>
+                <StyledBadgeAdvanced
+                  overlap="circular"
+                  variant="dot"
+                  sx={{ pl: 1 }}
+                ></StyledBadgeAdvanced>
+                <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
+                  Avanzado
+                </Typography>
+              </Box>
+            </Paper>
+          </Grid>
         </Grid>
-        <Grid container direction={"row"} justifyContent={"center"} spacing={5}>
+        <Grid
+          container
+          direction={"row"}
+          justifyContent={"space-around"}
+          spacing={3}
+          pt={5}
+        >
           <Grid item>
-            <Box sx={{ position: "relative", m: 8, alignItems: "center" }}>
-              <MenuItem
-                sx={{
-                  position: "absolute",
-                  top: "40%",
-                }}
-              >
-                Html & CSS
-              </MenuItem>
-              <CircularProgress
-                variant="determinate"
-                value={100}
-                size={150}
-                sx={{
-                  color: (theme) => theme.palette.grey[800],
-                }}
-              />
-              <CircularProgress
-                variant="determinate"
-                value={40}
-                size={150}
-                sx={{
-                  position: "absolute",
-                  left: 0,
-                }}
-              />
-            </Box>
+            <StyledBadgeIntermediate
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/html.png"
+                  width={100}
+                  height={100}
+                />
+                HTML
+              </PaperCustom>
+            </StyledBadgeIntermediate>
           </Grid>
           <Grid item>
-            <Box sx={{ position: "relative", m: 8 }}>
-              <CircularProgress
-                variant="determinate"
-                value={100}
-                size={150}
-                sx={{
-                  color: (theme) => theme.palette.grey[800],
-                }}
-              />
-              <CircularProgress
-                variant="determinate"
-                value={40}
-                size={150}
-                sx={{
-                  position: "absolute",
-                  left: 0,
-                }}
-              />
-              <MenuItem
-                sx={{
-                  position: "absolute",
-                  top: "40%",
-                  ml: "10%",
-                }}
-              >
-                Javascript
-              </MenuItem>
-            </Box>
+            <StyledBadgeIntermediate
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/js.png"
+                  width={100}
+                  height={100}
+                />
+                JAVASCRIPT
+              </PaperCustom>
+            </StyledBadgeIntermediate>
           </Grid>
           <Grid item>
-            <Box sx={{ position: "relative", m: 8 }}>
-              <CircularProgress
-                variant="determinate"
-                value={100}
-                size={150}
-                sx={{
-                  color: (theme) => theme.palette.grey[800],
-                }}
-              />
-              <CircularProgress
-                variant="determinate"
-                value={40}
-                size={150}
-                sx={{
-                  position: "absolute",
-                  left: 0,
-                }}
-              />
-              <MenuItem
-                sx={{
-                  position: "absolute",
-                  top: "40%",
-                  ml: "10%",
-                }}
-              >
-                React.JS
-              </MenuItem>
-            </Box>
+            <StyledBadgeIntermediate
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              {" "}
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/react.svg"
+                  width={100}
+                  height={100}
+                />
+                REACT.JS
+              </PaperCustom>
+            </StyledBadgeIntermediate>
           </Grid>
           <Grid item>
-            <Box sx={{ position: "relative", m: 8 }}>
-              <CircularProgress
-                variant="determinate"
-                value={100}
-                size={150}
-                sx={{
-                  color: (theme) => theme.palette.grey[800],
-                }}
-              />
-              <CircularProgress
-                variant="determinate"
-                value={40}
-                size={150}
-                sx={{
-                  position: "absolute",
-                  left: 0,
-                }}
-              />
-              <Typography
-                variant="h6"
-                sx={{
-                  position: "absolute",
-                  top: "40%",
-                  ml: "23%",
-                }}
-              >
+            <StyledBadgeBasic
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/net.png"
+                  width={100}
+                  height={100}
+                />
                 ASP.NET
-              </Typography>
-            </Box>
+              </PaperCustom>
+            </StyledBadgeBasic>
           </Grid>
           <Grid item>
-            <Box sx={{ position: "relative", m: 8 }}>
-              <CircularProgress
-                variant="determinate"
-                value={100}
-                size={150}
-                sx={{
-                  color: (theme) => theme.palette.grey[800],
-                }}
-              />
-              <CircularProgress
-                variant="determinate"
-                value={40}
-                size={150}
-                sx={{
-                  position: "absolute",
-                  left: 0,
-                }}
-              />
-              <MenuItem
-                sx={{
-                  position: "absolute",
-                  top: "40%",
-                  ml: "10%",
-                }}
-              >
-                SQL Server
-              </MenuItem>
-            </Box>
+            <StyledBadgeBasic
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/sql.jpg"
+                  width={100}
+                  height={100}
+                />
+                SQL
+              </PaperCustom>
+            </StyledBadgeBasic>
+          </Grid>
+          <Grid item>
+            <StyledBadgeBasic
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              variant="dot"
+            >
+              <PaperCustom sx={{ p: 1 }}>
+                <img
+                  alt="test"
+                  src="src/assets/mui.png"
+                  width={100}
+                  height={100}
+                />
+                MUI
+              </PaperCustom>
+            </StyledBadgeBasic>
           </Grid>
         </Grid>
       </Box>

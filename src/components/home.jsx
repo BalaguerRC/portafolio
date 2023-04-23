@@ -1,6 +1,6 @@
 import Footer from "./footer";
 import Header from "./header";
-import About from "./section/about";
+import Contact from "./section/contact";
 import Projects from "./section/projects";
 import Resumen from "./section/resumen";
 import Skills from "./section/skills";
@@ -20,8 +20,8 @@ const Home = () => {
       <section id="projects">
         <Projects />
       </section>
-      <section id="about">
-        <About />
+      <section id="contact">
+        <Contact />
       </section>
       <footer style={{ height: "100%" }}>
         <Footer />

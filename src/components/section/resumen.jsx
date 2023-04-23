@@ -3,7 +3,7 @@ import { Avatar, Box, Grid, Typography } from "@mui/material";
 const Resumen = () => {
   return (
     <>
-      <Box sx={{ pt: 20, pb: 20, pr: 5, pl: 5 }}>
+      <Box sx={{ pt: 20, pb: 20, pr: 10, pl: 10 }}>
         <Grid
           container
           spacing={{ xs: 5, md: 3 }}

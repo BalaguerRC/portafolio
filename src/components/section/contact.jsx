@@ -1,13 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 
-const About = () => {
+const Contact = () => {
   return (
     <>
-      <Box sx={{ pt: 15, pb: 15, pr: 5, pl: 5, background: "#1D2433" }}>
-        <Grid container direction={"column"} alignItems={"center"}>
+      <Box sx={{ pt: 15, pb: 15, pr: 10, pl: 10, background: "#1D2433" }}>
+        <Grid container direction={"column"} alignItems={"center"} textAlign={"center"}>
           <Grid item>
             <Typography variant="h4" gutterBottom>
-              About
+              Contacto
             </Typography>
           </Grid>
           <Grid item>
@@ -23,4 +23,4 @@ const About = () => {
     </>
   );
 };
-export default About;
+export default Contact;
