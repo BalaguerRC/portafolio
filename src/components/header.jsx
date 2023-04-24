@@ -130,6 +130,7 @@ const Header = () => {
                 sx={{
                   my: 2,
                   display: "block",
+                  fontWeight: 700,
                   color: "#81CC96",
                 }}
               >
@@ -141,6 +142,7 @@ const Header = () => {
                 sx={{
                   my: 2,
                   display: "block",
+                  fontWeight: 700,
                   color: "#81CC96",
                 }}
               >
@@ -152,6 +154,7 @@ const Header = () => {
                 sx={{
                   my: 2,
                   display: "block",
+                  fontWeight: 700,
                   color: "#81CC96",
                 }}
               >
@@ -163,6 +166,7 @@ const Header = () => {
                 sx={{
                   my: 2,
                   display: "block",
+                  fontWeight: 700,
                   color: "#81CC96",
                 }}
               >

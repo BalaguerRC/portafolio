@@ -3,10 +3,8 @@ import { Box, Typography } from "@mui/material";
 const Footer = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center", position: "static" }}>
-        <Typography variant="h7">
-          Copyright © 2023 - All right reserved by NOTHING
-        </Typography>
+      <Box sx={{ textAlign: "center", position: "static", p: 5 }}>
+        <Typography variant="h7">Desained by Balaguer</Typography>
       </Box>
     </>
   );

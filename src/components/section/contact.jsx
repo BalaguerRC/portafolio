@@ -1,10 +1,17 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, TextField, Paper } from "@mui/material";
+import TextareaAutosize from "@mui/base/TextareaAutosize";
+import ContactForm from "./contact/contactForm";
 
 const Contact = () => {
   return (
     <>
       <Box sx={{ pt: 15, pb: 15, pr: 10, pl: 10, background: "#1D2433" }}>
-        <Grid container direction={"column"} alignItems={"center"} textAlign={"center"}>
+        <Grid
+          container
+          direction={"column"}
+          alignItems={"center"}
+          textAlign={"center"}
+        >
           <Grid item>
             <Typography variant="h4" gutterBottom>
               Contacto
@@ -17,7 +24,11 @@ const Contact = () => {
               et a id nisi.
             </Typography>
           </Grid>
-          <Grid item>{/**Projects */}</Grid>
+          {/** */}
+          <Grid item>
+            <ContactForm />
+          </Grid>
+          {/**Projects */}
         </Grid>
       </Box>
     </>

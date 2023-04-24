@@ -3,7 +3,7 @@ import "./index.css";
 import Header from "./components/header";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Home from "./components/home";
-import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
 
 function App() {
   const darkTheme = createTheme({
