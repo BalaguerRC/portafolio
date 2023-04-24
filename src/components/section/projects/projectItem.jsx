@@ -10,16 +10,17 @@ import {
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-const ProjectItem = ({ title, description, image }) => {
+const ProjectItem = ({ title, description, image, tecnology, repository }) => {
   const [Over, setOver] = useState(false);
   //const [Leave, setLeave] = useState(true);
+  //
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        minWidth: 200,
+        maxWidth: 373,
+        minWidth: 100,
         p: 2,
-        background: "#181d29",
+        background: Over ? "#283E46" : "#181d29",
         borderRadius: 5,
       }}
       onMouseOver={() => setOver(true)}
@@ -34,28 +35,29 @@ const ProjectItem = ({ title, description, image }) => {
             }}
           >
             <CardMedia
-              sx={{ height: 140, width: 340 }}
+              sx={{
+                height: 180,
+                width: 340,
+              }}
               image={image}
               title="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div" noWrap>
-                Detalles
-              </Typography>
-              <Typography variant="body2" color="text.secondary" noWrap>
-                Tecnologia: ...
+              <Typography variant="body2" color="text.secondary">
+                Tecnologias: {tecnology}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
+              <Button size="small" variant="outlined">
+                Ver Repositorio
+              </Button>
             </CardActions>
           </Box>
         </>
       ) : (
         <>
           <CardMedia
-            sx={{ height: 140, width: 340 }}
+            sx={{ height: 180, width: 340 }}
             image={image}
             title="green iguana"
           />
@@ -67,10 +69,6 @@ const ProjectItem = ({ title, description, image }) => {
               {description}
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
-          </CardActions>
         </>
       )}
     </Card>

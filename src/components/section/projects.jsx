@@ -1,39 +1,25 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import ProjectItem from "./projects/projectItem";
+import Admin from "../../assets/Admin2.png";
+import Product from "../../assets/Products.png";
 
 const Projectos = [
   {
     id: 1,
-    title: "Tienda V",
+    title: "Tienda Products",
     description: "Tienda para clientes",
-    image: "...",
+    image: Product,
+    tecnology: "HTML, Javascript, React.js, MaterialUI, React-Router-Dom",
+    repository: "",
   },
   {
     id: 2,
-    title: "Administracion de Tienda V",
+    title: "Administracion de Tienda Producs",
     description: "Pagina web administrativa",
-    image: "...",
-  },
-
-  {
-    id: 3,
-    title: "test3",
-    description: "description",
-    image: "...",
-  },
-  {
-    id: 4,
-    title: "test4",
-    description: "Pagina web administrativa",
-    image: "...",
-  },
-
-  {
-    id: 5,
-    title: "test5",
-    description: "Pagina web administrativa",
-    image: "...",
+    image: Admin,
+    tecnology: "HTML, Javascript, React.js, daisyUI, React-Router-Dom",
+    repository: "",
   },
 ];
 const Projects = () => {
@@ -57,11 +43,13 @@ const Projects = () => {
         <Container>
           <Grid container justifyContent={"center"} spacing={2}>
             {Projectos.map((item) => (
-              <Grid item key={item.id}>
+              <Grid item key={item.id} m={2}>
                 <ProjectItem
                   title={item.title}
                   description={item.description}
                   image={item.image}
+                  tecnology={item.tecnology}
+                  repository={item.repository}
                 />
               </Grid>
             ))}
