@@ -14,6 +14,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
   const [Over, setOver] = useState(false);
   //const [Leave, setLeave] = useState(true);
   //
+  console.log(repository)
   return (
     <Card
       sx={{
@@ -25,6 +26,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
       }}
       onMouseOver={() => setOver(true)}
       onMouseLeave={() => setOver(false)}
+      //onTouchMove={() => setOver(false)}
     >
       {Over ? (
         <>
@@ -38,6 +40,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
               sx={{
                 height: 180,
                 width: 340,
+                borderRadius: 3
               }}
               image={image}
               title="green iguana"
@@ -57,7 +60,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
       ) : (
         <>
           <CardMedia
-            sx={{ height: 180, width: 340 }}
+            sx={{ height: 180, width: 340, borderRadius: 3}}
             image={image}
             title="green iguana"
           />

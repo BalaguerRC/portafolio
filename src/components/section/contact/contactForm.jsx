@@ -45,7 +45,7 @@ const ContactForm = () => {
           <TextField multiline rows={6} label="Mensaje" fullWidth />
         </Grid>
         <Grid item sx={{ m: 1 }}>
-          <Button variant="contained" fullWidth>
+          <Button variant="contained" fullWidth sx={{background: "#81CC96"}}>
             Publicar
           </Button>
         </Grid>

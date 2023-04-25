@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <Box sx={{ textAlign: "center", position: "static", p: 5 }}>
-        <Typography variant="h7">Desained by Balaguer</Typography>
+        <Typography variant="h7">Designened by Balaguer</Typography>
       </Box>
     </>
   );

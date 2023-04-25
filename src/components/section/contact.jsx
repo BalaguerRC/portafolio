@@ -1,5 +1,4 @@
-import { Box, Grid, Typography, TextField, Paper } from "@mui/material";
-import TextareaAutosize from "@mui/base/TextareaAutosize";
+import { Box, Grid, Typography } from "@mui/material";
 import ContactForm from "./contact/contactForm";
 
 const Contact = () => {
