@@ -10,7 +10,7 @@ const Skills = () => {
   const values = [
     {
       value: 0,
-      label: "0°%",
+      label: "0%",
     },
     {
       value: 50,
@@ -35,7 +35,7 @@ const Skills = () => {
         >
           <Grid item>
             <Typography variant="h4" gutterBottom>
-              Skills
+              Habilidades
             </Typography>
           </Grid>
           <Grid item>
@@ -45,13 +45,16 @@ const Skills = () => {
               et a id nisi.
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid item pt={2}>
             <Paper
               sx={{
                 display: "flex",
                 flexDirection: "row",
                 p: 1,
                 borderRadius: 10,
+                background: "#181d29",
+
+                boxShadow: "10px 10px #151923",
               }}
             >
               <Box>
@@ -105,6 +108,7 @@ const Skills = () => {
                   src="src/assets/html.png"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 HTML
               </PaperCustom>
@@ -121,6 +125,7 @@ const Skills = () => {
                   src="src/assets/js.png"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 JAVASCRIPT
               </PaperCustom>
@@ -138,6 +143,7 @@ const Skills = () => {
                   src="src/assets/react.svg"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 REACT.JS
               </PaperCustom>
@@ -154,6 +160,7 @@ const Skills = () => {
                   src="src/assets/net.png"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 ASP.NET
               </PaperCustom>
@@ -170,6 +177,7 @@ const Skills = () => {
                   src="src/assets/sql.jpg"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 SQL
               </PaperCustom>
@@ -186,6 +194,7 @@ const Skills = () => {
                   src="src/assets/mui.png"
                   width={100}
                   height={100}
+                  style={{ borderRadius: 5 }}
                 />
                 MUI
               </PaperCustom>
@@ -199,12 +208,20 @@ const Skills = () => {
           alignItems={"center"}
           pt={10}
         >
-          <Box sx={{ width: 500 }}>
+          <Box sx={{ maxWidth: 600, width: "100%" }}>
             <Grid container direction={"row"} justifyContent="space-between">
-              <Typography variant="subtitle" gutterBottom>
+              <Typography
+                variant="subtitle"
+                gutterBottom
+                sx={{ color: "#81CC96" }}
+              >
                 Fron-End
               </Typography>
-              <Typography variant="subtitle" gutterBottom>
+              <Typography
+                variant="subtitle"
+                gutterBottom
+                sx={{ color: "#81CC96" }}
+              >
                 Back-End
               </Typography>
             </Grid>
@@ -219,12 +236,12 @@ const Skills = () => {
                 color: "#81CC96",
                 "& .MuiSlider-rail": {
                   color: "#81CC96",
-                  height: 3,
+                  height: 10,
                 },
                 "& .MuiSlider-valueLabel": {
                   fontSize: 12,
                   fontWeight: "normal",
-                  top: -6,
+                  top: 0,
                   backgroundColor: "unset",
                   "&:before": {
                     display: "none",
@@ -234,7 +251,9 @@ const Skills = () => {
                   },
                 },
                 "&.Mui-disabled": {
-                  color: "#81CC96",
+                  color: "#a5dab4",
+                  height: 12,
+                  boxShadow: "0px 8px #0B0F16"
                 },
               }}
             />

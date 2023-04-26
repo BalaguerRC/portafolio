@@ -12,9 +12,6 @@ import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 const ProjectItem = ({ title, description, image, tecnology, repository }) => {
   const [Over, setOver] = useState(false);
-  //const [Leave, setLeave] = useState(true);
-  //
-  console.log(repository)
   return (
     <Card
       sx={{
@@ -22,6 +19,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
         minWidth: 100,
         p: 2,
         background: Over ? "#283E46" : "#181d29",
+        boxShadow: "10px 10px #0B0F16",
         borderRadius: 5,
       }}
       onMouseOver={() => setOver(true)}
@@ -40,7 +38,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
               sx={{
                 height: 180,
                 width: 340,
-                borderRadius: 3
+                borderRadius: 3,
               }}
               image={image}
               title="green iguana"
@@ -51,7 +49,11 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" variant="outlined">
+              <Button
+                size="small"
+                variant="contained"
+                sx={{ boxShadow: "10px 10px #181d29" }}
+              >
                 Ver Repositorio
               </Button>
             </CardActions>
@@ -60,7 +62,7 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
       ) : (
         <>
           <CardMedia
-            sx={{ height: 180, width: 340, borderRadius: 3}}
+            sx={{ height: 180, width: 340, borderRadius: 3 }}
             image={image}
             title="green iguana"
           />

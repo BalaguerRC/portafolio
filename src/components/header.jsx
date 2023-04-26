@@ -162,7 +162,7 @@ const Header = () => {
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
-                href="#about"
+                href="#contact"
                 sx={{
                   my: 2,
                   display: "block",
