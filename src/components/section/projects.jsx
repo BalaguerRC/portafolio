@@ -31,43 +31,6 @@ const Projectos = [
     repository: "",
   },
 ];
-const Projects2 = () => {
-  return (
-    <>
-      <Box sx={{ pt: 15, pb: 15, pr: 5, pl: 5, background: "#0f141f" }}>
-        <Grid container direction={"column"} alignItems={"center"}>
-          <Grid item>
-            <Typography variant="h4" gutterBottom>
-              Projects
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle2" color={"gray"} gutterBottom>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Container>
-          <Grid container justifyContent={"center"} spacing={2}>
-            {Projectos.map((item) => (
-              <Grid item key={item.id} m={2}>
-                <ProjectItem
-                  title={item.title}
-                  description={item.description}
-                  image={item.image}
-                  tecnology={item.tecnology}
-                  repository={item.repository}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
-    </>
-  );
-};
 
 const Projects = () => {
   return (

@@ -4,7 +4,9 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   IconButton,
+  Link,
   Menu,
   MenuItem,
   Toolbar,
@@ -13,7 +15,9 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({lenguaje}) => {
+  //const lenguaje = localStorage.getItem("lenguaje");
+
   const [anchorElNav, setAnchorElNav] = useState(null);
   //const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -134,7 +138,7 @@ const Header = () => {
                   color: "#81CC96",
                 }}
               >
-                Inicio
+                {lenguaje == "en"? "Home": "Inicio"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -146,7 +150,7 @@ const Header = () => {
                   color: "#81CC96",
                 }}
               >
-                Habilidades
+                {lenguaje == "en"? "Skills": "Habilidades"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -158,7 +162,7 @@ const Header = () => {
                   color: "#81CC96",
                 }}
               >
-                Proyectos
+                {lenguaje == "en"? "Projects": "Proyectos"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -170,8 +174,29 @@ const Header = () => {
                   color: "#81CC96",
                 }}
               >
-                Contacto
+                {lenguaje == "en"? "Contact": "Contacto"}
               </Button>
+            </Box>
+            <Box display={"flex"}>
+              <Link
+                p={1}
+                onClick={() => localStorage.setItem("lenguaje", "es")}
+                href="/"
+                color={lenguaje == "es" ? "#e07400" : "primary"}
+                fontWeight={lenguaje == "es" ? 600 : 400}
+              >
+                ES
+              </Link>
+              <Divider orientation="vertical" flexItem />
+              <Link
+                p={1}
+                onClick={() => localStorage.setItem("lenguaje", "en")}
+                href="/"
+                color={lenguaje == "en" ? "#e07400" : "primary"}
+                fontWeight={lenguaje == "en" ? 600 : 400}
+              >
+                EN
+              </Link>
             </Box>
           </Toolbar>
         </Container>

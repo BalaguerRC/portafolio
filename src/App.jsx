@@ -14,6 +14,8 @@ function App() {
       },
     },
   });
+  const lenguaje = localStorage.getItem("lenguaje");
+  if (lenguaje == null) localStorage.setItem("lenguaje", "es");
   return (
     <>
       <ThemeProvider theme={darkTheme}>
