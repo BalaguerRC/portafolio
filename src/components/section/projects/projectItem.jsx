@@ -24,7 +24,6 @@ const ProjectItem = ({ title, description, image, tecnology, repository }) => {
       }}
       onMouseOver={() => setOver(true)}
       onMouseLeave={() => setOver(false)}
-      //onTouchMove={() => setOver(false)}
     >
       {Over ? (
         <>

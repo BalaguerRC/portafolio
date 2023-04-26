@@ -18,9 +18,7 @@ const Contact = () => {
           </Grid>
           <Grid item>
             <Typography variant="subtitle2" color={"gray"} gutterBottom>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Si quiere enviarme un mensaje, escriba sus datos aqui abajo.
             </Typography>
           </Grid>
           {/** */}

@@ -5,6 +5,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Chip,
   Grid,
   Paper,
   Typography,
@@ -49,9 +50,20 @@ const ProjectItemNew = ({
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {tecnology}
-              </Typography>
+              <Box sx={{ display: "flex", lexWrap: "wrap" }}>
+                {tecnology &&
+                  tecnology.map((item, id) => {
+                    return (
+                      <div key={id}>
+                        <Chip
+                          label={item}
+                          variant="outlined"
+                          sx={{ pl: 1, pr: 1, color: "#9bc9c0", border: "1px solid #9bc9c0"}}
+                        />
+                      </div>
+                    );
+                  })}
+              </Box>
             </Box>
             <Box
               mt={2}
@@ -62,6 +74,7 @@ const ProjectItemNew = ({
               <Button
                 size="small"
                 variant="contained"
+                href={repository}
                 sx={{
                   p: 1,
                   background: "#81CC96",
@@ -139,17 +152,26 @@ const ProjectItemNew = ({
                 >
                   {description}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  fontSize={12}
-                >
-                  {tecnology}
-                </Typography>
+                <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+                  {tecnology &&
+                    tecnology.map((item, id) => {
+                      return (
+                        <div key={id}>
+                          <Chip
+                            size="small"
+                            label={item}
+                            variant="outlined"
+                            sx={{ pl: 1, pr: 1,color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                          />
+                        </div>
+                      );
+                    })}
+                </Box>
               </Box>
               <Box p={2}>
                 <Button
                   size="small"
+                  href={repository}
                   variant="contained"
                   sx={{ boxShadow: "10px 10px #181d29" }}
                 >
@@ -180,14 +202,26 @@ const ProjectItemNew = ({
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {tecnology}
-              </Typography>
+              <Box sx={{ display: "flex", lexWrap: "wrap" }}>
+                {tecnology &&
+                  tecnology.map((item, id) => {
+                    return (
+                      <div key={id}>
+                        <Chip
+                          label={item}
+                          variant="outlined"
+                          sx={{ pl: 1, pr: 1, color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                        />
+                      </div>
+                    );
+                  })}
+              </Box>
             </Box>
             <Box mt={2} mb={2}>
               <Button
                 size="small"
                 variant="contained"
+                href={repository}
                 sx={{
                   p: 1,
                   background: "#81CC96",
@@ -265,17 +299,26 @@ const ProjectItemNew = ({
                 >
                   {description}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  fontSize={12}
-                >
-                  {tecnology}
-                </Typography>
+                <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+                  {tecnology &&
+                    tecnology.map((item, id) => {
+                      return (
+                        <div key={id}>
+                          <Chip
+                            size="small"
+                            label={item}
+                            variant="outlined"
+                            sx={{ pl: 1, pr: 1,color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                          />
+                        </div>
+                      );
+                    })}
+                </Box>
               </Box>
               <Box p={2}>
                 <Button
                   size="small"
+                  href={repository}
                   variant="contained"
                   sx={{ boxShadow: "10px 10px #131720" }}
                 >
