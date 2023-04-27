@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-const Header = ({lenguaje}) => {
+const Header = ({ lenguaje }) => {
   //const lenguaje = localStorage.getItem("lenguaje");
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -138,7 +138,7 @@ const Header = ({lenguaje}) => {
                   color: "#81CC96",
                 }}
               >
-                {lenguaje == "en"? "Home": "Inicio"}
+                {lenguaje == "en" ? "Home" : "Inicio"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -150,7 +150,7 @@ const Header = ({lenguaje}) => {
                   color: "#81CC96",
                 }}
               >
-                {lenguaje == "en"? "Skills": "Habilidades"}
+                {lenguaje == "en" ? "Skills" : "Habilidades"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -162,7 +162,7 @@ const Header = ({lenguaje}) => {
                   color: "#81CC96",
                 }}
               >
-                {lenguaje == "en"? "Projects": "Proyectos"}
+                {lenguaje == "en" ? "Projects" : "Proyectos"}
               </Button>
               <Button
                 onClick={handleCloseNavMenu}
@@ -174,7 +174,7 @@ const Header = ({lenguaje}) => {
                   color: "#81CC96",
                 }}
               >
-                {lenguaje == "en"? "Contact": "Contacto"}
+                {lenguaje == "en" ? "Contact" : "Contacto"}
               </Button>
             </Box>
             <Box display={"flex"}>

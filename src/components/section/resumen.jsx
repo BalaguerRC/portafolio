@@ -102,31 +102,40 @@ const Resumen = ({ lenguaje }) => {
                   <IconButton>
                     <LinkedInIcon />
                   </IconButton>
-                  <IconButton>
+                  <IconButton href="https://github.com/BalaguerRC">
                     <GitHubIcon />
                   </IconButton>
                 </Box>
               </>
             )}
-
-            <Button
-              variant="contained"
-              startIcon={<DownloadOutlinedIcon />}
+            <Box
               sx={{
-                maxWidth: 100,
-                width: "100%",
-                borderRadius: 10,
-                p: 1,
-                mt: 2,
-                background: "#81CC96",
-                ":hover": {
-                  background: "#a5dab4",
-                },
-                boxShadow: "10px 10px #0B0F16",
+                display: { xs: "flex", md: "grid" },
+                flexDirection: "row",
+                justifyContent: {xs: "center", md: "left"},
               }}
             >
-              CV
-            </Button>
+              <Button
+                variant="contained"
+                startIcon={<DownloadOutlinedIcon />}
+                sx={{
+                  width: 100,
+                  //width: "100%",
+                  borderRadius: 10,
+                  p: 1,
+                  mt: 2,
+                  background: "#81CC96",
+                  transition: "width .5s",
+                  ":hover": {
+                    background: "#a5dab4",
+                    width: 150,
+                  },
+                  boxShadow: "10px 10px #0B0F16",
+                }}
+              >
+                CV
+              </Button>
+            </Box>
           </Grid>
           <Grid item xs={2} sm={8} md>
             <Grid

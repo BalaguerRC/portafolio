@@ -85,8 +85,11 @@ const ProjectItemNew = ({
                   p: 1,
                   borderRadius: 10,
                   background: "#81CC96",
+                  width: 200,
+                  transition: "width .5s",
                   ":hover": {
                     background: "#a5dab4",
+                    width: 250,
                   },
                   boxShadow: "10px 10px #0B0F16",
                 }}
@@ -249,9 +252,12 @@ const ProjectItemNew = ({
                 sx={{
                   p: 1,
                   borderRadius: 10,
+                  width: 200,
                   background: "#81CC96",
+                  transition: "width .5s",
                   ":hover": {
                     background: "#a5dab4",
+                    width: 250
                   },
                   boxShadow: "10px 10px #0B0F16",
                 }}

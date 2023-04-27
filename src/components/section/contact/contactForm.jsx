@@ -29,49 +29,38 @@ const TextFieldCustom = styled(TextField)({
   },
 });
 
-const ContactForm = ({ lenguaje }) => {
-  const [Nam, setName] = useState("");
-  const [LasNam, setLasName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [No, setNo] = useState("");
-  const [Message, setMessage] = useState("");
-  const [Loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
-  const Form = useRef();
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const template = import.meta.env.VITE_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
-  const [envio, setEnvio] = useState(0);
+const ContactForm = ({ lenguaje }) => {
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const form = useRef();
+
+  const [send, setSend] = useState(0);
 
   /** */
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoading(!Loading);
+    setLoading(!loading);
     ValidateEmail();
   };
   const ValidateEmail = () => {
-    if ((Nam, LasNam, Email, No, Message != "")) {
-      setTimeout(() => {
-        setLoading(Loading);
-        setOpen(!open);
-        emailjs
-          .sendForm(
-            "service_zs9t9pj",
-            "template_3omhq6s",
-            Form.current,
-            "IhuHlaT7JrANB4cCL"
-          )
-          .then(
-            (res) => {
-              console.log(res.text);
-            },
-            (err) => {
-              console.log(err);
-            }
-          );
-        //console.log(open);
-        setEnvio(1);
-        console.log("enviado");
-      }, 1000);
-    }
+    setTimeout(() => {
+      setLoading(loading);
+      setOpen(!open);
+      emailjs.sendForm(serviceId, template, form.current, publicKey).then(
+        (res) => {
+          console.log(res.text);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+      setSend(1);
+      console.log("enviado");
+    }, 1000);
   };
   return (
     <Box>
@@ -82,10 +71,10 @@ const ContactForm = ({ lenguaje }) => {
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       >
         <Alert severity="success" variant="filled">
-          {lenguaje == "en" ? "Email sudmited" : "Correo enviado"}
+          {lenguaje == "en" ? "Email submitted" : "Correo enviado"}
         </Alert>
       </Snackbar>
-      <form ref={Form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail}>
         <Grid container direction={"row"}>
           <Grid item xs m={1}>
             <TextFieldCustom
@@ -94,9 +83,6 @@ const ContactForm = ({ lenguaje }) => {
               variant="outlined"
               name="user_name"
               type="text"
-              onChange={(e) => {
-                setName(e.currentTarget.value);
-              }}
               placeholder={lenguaje == "en" ? "name..." : "nombre..."}
               fullWidth
             />
@@ -104,11 +90,9 @@ const ContactForm = ({ lenguaje }) => {
           <Grid item xs m={1}>
             <TextFieldCustom
               label={lenguaje == "en" ? "Lastname" : "Apellidos"}
-              required
               variant="outlined"
               name="user_lastname"
               type="text"
-              onChange={(e) => setLasName(e.currentTarget.value)}
               placeholder={lenguaje == "en" ? "lastname..." : "apellidos..."}
               fullWidth
             />
@@ -122,21 +106,7 @@ const ContactForm = ({ lenguaje }) => {
               variant="outlined"
               name="user_email"
               type="email"
-              onChange={(e) => setEmail(e.currentTarget.value)}
               placeholder="example@gmail.com"
-              fullWidth
-            />
-          </Grid>
-
-          <Grid item xs sx={{ m: 1 }}>
-            <TextFieldCustom
-              label={lenguaje == "en" ? "Phone" : "Numero"}
-              required
-              variant="outlined"
-              name="phone"
-              type="tel"
-              onChange={(e) => setNo(e.currentTarget.value)}
-              placeholder="809-12..."
               fullWidth
             />
           </Grid>
@@ -152,11 +122,10 @@ const ContactForm = ({ lenguaje }) => {
               fullWidth
               type="text"
               placeholder={lenguaje == "en" ? "message..." : "mensaje..."}
-              onChange={(e) => setMessage(e.currentTarget.value)}
             />
           </Grid>
           <Grid item sx={{ m: 1 }}>
-            {Loading ? (
+            {loading ? (
               <LoadingButton
                 loading
                 variant="outlined"
@@ -169,7 +138,7 @@ const ContactForm = ({ lenguaje }) => {
               </LoadingButton>
             ) : (
               <>
-                {envio == 1 ? (
+                {send == 1 ? (
                   <>
                     <Button
                       variant="contained"
@@ -186,7 +155,11 @@ const ContactForm = ({ lenguaje }) => {
                     >
                       {lenguaje == "en" ? "Submit" : "Enviar"}
                     </Button>
-                    <Typography variant="caption">{lenguaje == "en" ?  "To send another email, refresh the page.": "Para enviar otro correo, actualize la pagina"}</Typography>
+                    <Typography variant="caption">
+                      {lenguaje == "en"
+                        ? "To send another email, refresh the page."
+                        : "Para enviar otro correo, actualize la pagina"}
+                    </Typography>
                   </>
                 ) : (
                   <Button

@@ -13,7 +13,7 @@ const Footer = ({ lenguaje }) => {
           alignItems={"center"}
         >
           <Grid item>
-            <IconButton>
+            <IconButton href="https://github.com/BalaguerRC">
               <GitHubIcon/>
             </IconButton>
           </Grid>
