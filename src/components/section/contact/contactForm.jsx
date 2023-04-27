@@ -45,7 +45,6 @@ const ContactForm = ({ lenguaje }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(!Loading);
-    // console.log(Form.current.value)
     ValidateEmail();
   };
   const ValidateEmail = () => {
@@ -53,7 +52,7 @@ const ContactForm = ({ lenguaje }) => {
       setTimeout(() => {
         setLoading(Loading);
         setOpen(!open);
-        /*emailjs
+        emailjs
           .sendForm(
             "service_zs9t9pj",
             "template_3omhq6s",
@@ -67,7 +66,7 @@ const ContactForm = ({ lenguaje }) => {
             (err) => {
               console.log(err);
             }
-          );*/
+          );
         //console.log(open);
         setEnvio(1);
         console.log("enviado");
@@ -135,7 +134,7 @@ const ContactForm = ({ lenguaje }) => {
               required
               variant="outlined"
               name="phone"
-              type="text"
+              type="tel"
               onChange={(e) => setNo(e.currentTarget.value)}
               placeholder="809-12..."
               fullWidth
@@ -187,7 +186,7 @@ const ContactForm = ({ lenguaje }) => {
                     >
                       {lenguaje == "en" ? "Submit" : "Enviar"}
                     </Button>
-                    <Typography>Para enviar otro correo actualize la pagina</Typography>
+                    <Typography variant="caption">{lenguaje == "en" ?  "To send another email, refresh the page.": "Para enviar otro correo, actualize la pagina"}</Typography>
                   </>
                 ) : (
                   <Button

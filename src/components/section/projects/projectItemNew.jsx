@@ -35,6 +35,8 @@ const ProjectItemNew = ({
           alignItems={"center"}
           justifyContent={"center"}
           m={2}
+          mt={5}
+          mb={5}
         >
           <Grid
             item
@@ -183,8 +185,14 @@ const ProjectItemNew = ({
                   size="small"
                   href={repository}
                   variant="contained"
-                  sx={{ boxShadow: "10px 10px #181d29",
-                  borderRadius: 10, }}
+                  sx={{
+                    boxShadow: "10px 10px #181d29",
+                    background: "#81CC96",
+                    ":hover": {
+                      background: "#a5dab4",
+                    },
+                    borderRadius: 10,
+                  }}
                 >
                   {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
                 </Button>
@@ -342,8 +350,14 @@ const ProjectItemNew = ({
                   size="small"
                   href={repository}
                   variant="contained"
-                  sx={{ boxShadow: "10px 10px #131720",
-                  borderRadius: 10, }}
+                  sx={{
+                    boxShadow: "10px 10px #131720",
+                    borderRadius: 10,
+                    background: "#81CC96",
+                    ":hover": {
+                      background: "#a5dab4",
+                    },
+                  }}
                 >
                   {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
                 </Button>

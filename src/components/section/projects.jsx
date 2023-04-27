@@ -44,12 +44,12 @@ const Projects = ({lenguaje}) => {
               {lenguaje == "en" ? "Projects" : "Proyectos"}
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid item textAlign={"center"}>
             <Typography variant="subtitle2" color={"gray"} gutterBottom>
               {lenguaje == "en" ? "These are personal projects I have worked on, each of them has the technologies I have used and a button to view the source code on github." : "Estos son proyectos personales en los que he trabajado, cada uno de ellos tiene las tecnologías que he utilizado y un botón para ver el código fuente en github."}
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid item pt={2}>
             <Grid
               container
               direction={"column"}

@@ -1,5 +1,6 @@
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = ({ lenguaje }) => {
   return (
@@ -11,6 +12,11 @@ const Footer = ({ lenguaje }) => {
           justifyContent={"center"}
           alignItems={"center"}
         >
+          <Grid item>
+            <IconButton>
+              <GitHubIcon/>
+            </IconButton>
+          </Grid>
           <Grid item>
             <IconButton>
               <LinkedInIcon />
