@@ -1,40 +1,90 @@
-import { Avatar, Box, Button, Grid, Paper, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  Link,
+  Paper,
+  Typography,
+} from "@mui/material";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 
-const Resumen = () => {
+// eslint-disable-next-line react/prop-types
+const Resumen = ({ lenguaje }) => {
   return (
     <>
       <Box sx={{ pt: 20, pb: 20, pr: 10, pl: 10 }}>
         <Grid
           container
+          direction={{xs: "column-reverse", md: "row"}}
           spacing={{ xs: 5, md: 3 }}
           columns={{ xs: 2, sm: 8, md: 10 }}
         >
           <Grid item xs={2} sm={8} md={4}>
-            <Typography variant="h3" gutterBottom>
-              Balaguer Rivera
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom textAlign={"justify"}>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi. Provident cupiditate voluptatem et in. Quaerat
-              fugiat ut assumenda excepturi exercitationem quasi. In deleniti
-              eaque aut repudiandae et a id nisi. Provident cupiditate
-              voluptatem et in. Quaerat fugiat ut assumenda excepturi
-              exercitationem quasi. In deleniti eaque aut repudiandae et a id
-              nisi. Provident cupiditate voluptatem et in. Quaerat fugiat ut
-              assumenda excepturi exercitationem quasi. In deleniti eaque aut
-              repudiandae et a id nisi.
-            </Typography>
-            {/* <Typography variant="subtitle2" gutterBottom>
-              balaguerrivera@gmail.com
-            </Typography> */}
+            {lenguaje == "en" ? (
+              <>
+                <Typography variant="h3" gutterBottom textAlign={{xs: "center", md: "inherit"}}>
+                  Hi, I am Balaguer Rivera!
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  gutterBottom
+                  textAlign={"justify"}
+                >
+                  I am a graduate of the Software Development Technologist
+                  career at the {""}
+                  <Link>Instituto Tecnologico de las Americas (ITLA)</Link>, I
+                  really like programming and web development, currently I have
+                  little experience in the workplace, so I am looking for more
+                  experience and continue learning. I want to use my programming
+                  skills to collaborate with teams and create efficient and
+                  quality solutions.
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  color={"text.secondary"}
+                  gutterBottom
+                >
+                  Email: balaguerrivera@gmail.com
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Typography variant="h3" gutterBottom>
+                  Hola, soy Balaguer Rivera!
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  gutterBottom
+                  textAlign={"justify"}
+                >
+                  Soy, egredado de la carrera Tecnologo en Desarrollo de
+                  Software del{" "}
+                  <Link>Instituto Tecnologico de las Americas (ITLA)</Link>, me
+                  gusta mucho la programacion y el ambito de desarrollo web,
+                  actualmente tengo poca experiencia en el ambito laboral, por
+                  lo cual, busco obtener mas experiencia y seguir aprendiendo.
+                  Deseo utilizar mis conocimientos de programacion para
+                  colaborar con equipos y crear soluciones eficientes y de
+                  calidad.
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  color={"text.secondary"}
+                  gutterBottom
+                >
+                  Correo: balaguerrivera@gmail.com
+                </Typography>
+              </>
+            )}
+
             <Button
               variant="contained"
               startIcon={<DownloadOutlinedIcon />}
               sx={{
                 maxWidth: 100,
                 width: "100%",
+                borderRadius: 10,
                 p: 1,
                 mt: 2,
                 background: "#81CC96",

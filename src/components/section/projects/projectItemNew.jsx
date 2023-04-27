@@ -1,9 +1,6 @@
 import {
   Box,
   Button,
-  Card,
-  CardActions,
-  CardContent,
   CardMedia,
   Chip,
   Grid,
@@ -11,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-
+// eslint-disable-next-line react/prop-types
 const ProjectItemNew = ({
   id,
   title,
@@ -19,6 +16,7 @@ const ProjectItemNew = ({
   image,
   tecnology,
   repository,
+  lenguaje,
 }) => {
   const [validate, setValidate] = useState(false);
 
@@ -27,6 +25,7 @@ const ProjectItemNew = ({
       setValidate(!validate);
     }
   }, []);
+
   return (
     <>
       {validate ? (
@@ -43,14 +42,14 @@ const ProjectItemNew = ({
               display: { xs: "none", md: "grid" },
             }}
           >
-            <Box pl={2} pt={2}>
+            <Box pl={2} pt={2} sx={{ maxWidth: 400, width: "100%" }}>
               <Typography gutterBottom variant="h5" component="div">
                 {title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Box sx={{ display: "flex", lexWrap: "wrap" }}>
+              <Box sx={{ display: "flex", lexWrap: "wrap", mt: 2 }}>
                 {tecnology &&
                   tecnology.map((item, id) => {
                     return (
@@ -58,7 +57,12 @@ const ProjectItemNew = ({
                         <Chip
                           label={item}
                           variant="outlined"
-                          sx={{ pl: 1, pr: 1, color: "#9bc9c0", border: "1px solid #9bc9c0"}}
+                          sx={{
+                            pl: 1,
+                            pr: 1,
+                            color: "#9bc9c0",
+                            border: "1px solid #9bc9c0",
+                          }}
                         />
                       </div>
                     );
@@ -77,6 +81,7 @@ const ProjectItemNew = ({
                 href={repository}
                 sx={{
                   p: 1,
+                  borderRadius: 10,
                   background: "#81CC96",
                   ":hover": {
                     background: "#a5dab4",
@@ -84,7 +89,7 @@ const ProjectItemNew = ({
                   boxShadow: "10px 10px #0B0F16",
                 }}
               >
-                Ver Repositorio
+                {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
               </Button>
             </Box>
           </Grid>
@@ -152,7 +157,7 @@ const ProjectItemNew = ({
                 >
                   {description}
                 </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+                <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                   {tecnology &&
                     tecnology.map((item, id) => {
                       return (
@@ -161,7 +166,12 @@ const ProjectItemNew = ({
                             size="small"
                             label={item}
                             variant="outlined"
-                            sx={{ pl: 1, pr: 1,color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                            sx={{
+                              pl: 1,
+                              pr: 1,
+                              color: "#9bc9c0",
+                              border: "1px solid #9bc9c0",
+                            }}
                           />
                         </div>
                       );
@@ -173,9 +183,10 @@ const ProjectItemNew = ({
                   size="small"
                   href={repository}
                   variant="contained"
-                  sx={{ boxShadow: "10px 10px #181d29" }}
+                  sx={{ boxShadow: "10px 10px #181d29",
+                  borderRadius: 10, }}
                 >
-                  Ver Repositorio
+                  {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
                 </Button>
               </Box>
             </Paper>
@@ -195,14 +206,14 @@ const ProjectItemNew = ({
               display: { xs: "none", md: "grid" },
             }}
           >
-            <Box pr={2} pt={2}>
+            <Box pr={2} pt={2} sx={{ maxWidth: 400, width: "100%" }}>
               <Typography gutterBottom variant="h5" component="div">
                 {title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Box sx={{ display: "flex", lexWrap: "wrap" }}>
+              <Box sx={{ display: "flex", lexWrap: "wrap", mt: 2 }}>
                 {tecnology &&
                   tecnology.map((item, id) => {
                     return (
@@ -210,7 +221,12 @@ const ProjectItemNew = ({
                         <Chip
                           label={item}
                           variant="outlined"
-                          sx={{ pl: 1, pr: 1, color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                          sx={{
+                            pl: 1,
+                            pr: 1,
+                            color: "#9bc9c0",
+                            border: "1px solid #9bc9c0",
+                          }}
                         />
                       </div>
                     );
@@ -224,6 +240,7 @@ const ProjectItemNew = ({
                 href={repository}
                 sx={{
                   p: 1,
+                  borderRadius: 10,
                   background: "#81CC96",
                   ":hover": {
                     background: "#a5dab4",
@@ -231,7 +248,7 @@ const ProjectItemNew = ({
                   boxShadow: "10px 10px #0B0F16",
                 }}
               >
-                Ver Repositorio
+                {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
               </Button>
             </Box>
           </Grid>
@@ -299,7 +316,7 @@ const ProjectItemNew = ({
                 >
                   {description}
                 </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+                <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                   {tecnology &&
                     tecnology.map((item, id) => {
                       return (
@@ -308,7 +325,12 @@ const ProjectItemNew = ({
                             size="small"
                             label={item}
                             variant="outlined"
-                            sx={{ pl: 1, pr: 1,color: "#9bc9c0",border: "1px solid #9bc9c0" }}
+                            sx={{
+                              pl: 1,
+                              pr: 1,
+                              color: "#9bc9c0",
+                              border: "1px solid #9bc9c0",
+                            }}
                           />
                         </div>
                       );
@@ -320,9 +342,10 @@ const ProjectItemNew = ({
                   size="small"
                   href={repository}
                   variant="contained"
-                  sx={{ boxShadow: "10px 10px #131720" }}
+                  sx={{ boxShadow: "10px 10px #131720",
+                  borderRadius: 10, }}
                 >
-                  Ver Repositorio
+                  {lenguaje == "en" ? "View Repository" : "Ver Repositorio"}
                 </Button>
               </Box>
             </Paper>

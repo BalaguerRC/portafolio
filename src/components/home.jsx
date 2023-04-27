@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Footer from "./footer";
 import Header from "./header";
 import Contact from "./section/contact";
@@ -10,7 +10,7 @@ const Home = () => {
   const lenguaje=localStorage.getItem("lenguaje");
   // if(lenguaje==null) localStorage.setItem("lenguaje", "es");
 
-  const [active,setActive]=useState(false);
+  //const [active,setActive]=useState(false);
 
   useEffect(()=>{
     console.log("lenguaje", lenguaje)
@@ -21,19 +21,19 @@ const Home = () => {
         <Header lenguaje={lenguaje}/>
       </header>
       <section id="resumen">
-        <Resumen />
+        <Resumen lenguaje={lenguaje}/>
       </section>
       <section id="skills">
-        <Skills />
+        <Skills lenguaje={lenguaje}/>
       </section>
       <section id="projects">
-        <Projects />
+        <Projects lenguaje={lenguaje}/>
       </section>
       <section id="contact">
-        <Contact />
+        <Contact lenguaje={lenguaje}/>
       </section>
       <footer style={{ height: "100%" }}>
-        <Footer />
+        <Footer lenguaje={lenguaje}/>
       </footer>
     </>
   );

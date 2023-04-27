@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import ContactForm from "./contact/contactForm";
 
-const Contact = () => {
+const Contact = ({lenguaje}) => {
   return (
     <>
       <Box sx={{ pt: 15, pb: 15, pr: 10, pl: 10, background: "#1D2433" }}>
@@ -13,17 +13,17 @@ const Contact = () => {
         >
           <Grid item>
             <Typography variant="h4" gutterBottom>
-              Contacto
+              {lenguaje == "en" ? "Contact": "Contacto"}
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="subtitle2" color={"gray"} gutterBottom>
-              Si quiere enviarme un mensaje, escriba sus datos aqui abajo.
+            {lenguaje == "en" ? "If you wish to contact me and send me a message, please write your contact information below.": "Si desea ponerse en contacto conmigo y enviarme un mensaje, escriba a continuación sus datos de contacto."}
             </Typography>
           </Grid>
           {/** */}
           <Grid item>
-            <ContactForm />
+            <ContactForm lenguaje={lenguaje}/>
           </Grid>
           {/**Projects */}
         </Grid>

@@ -6,7 +6,8 @@ import {
   StyledBadgeIntermediate,
 } from "./style/skills";
 
-const Skills = () => {
+// eslint-disable-next-line react/prop-types
+const Skills = ({ lenguaje }) => {
   const values = [
     {
       value: 0,
@@ -35,14 +36,14 @@ const Skills = () => {
         >
           <Grid item>
             <Typography variant="h4" gutterBottom>
-              Habilidades
+              {lenguaje == "en" ? "Habilities" : "Habilidades"}
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="subtitle2" color={"gray"} gutterBottom>
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              {lenguaje == "en"
+                ? "These are the technologies I have used the most, below is the level I am at with the technologies. In addition, I have knowledge of agile methodologies such as Scrum."
+                : "Estas son las tecnologías que más he utilizado, a continuación se indica el nivel en el que me encuentro con las tecnologías. Además, tengo conocimientos sobre metodologías ágiles como Scrum."}
             </Typography>
           </Grid>
           <Grid item pt={2}>
@@ -64,7 +65,7 @@ const Skills = () => {
                   sx={{ pl: 1 }}
                 ></StyledBadgeBasic>
                 <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
-                  Basico
+                  {lenguaje == "en" ? "Basic" : "Basico"}
                 </Typography>
               </Box>
               <Box>
@@ -74,7 +75,7 @@ const Skills = () => {
                   sx={{ pl: 1 }}
                 ></StyledBadgeIntermediate>
                 <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
-                  Intermedio
+                  {lenguaje == "en" ? "Intermediate" : "Intermedio"}
                 </Typography>
               </Box>
               <Box>
@@ -84,7 +85,7 @@ const Skills = () => {
                   sx={{ pl: 1 }}
                 ></StyledBadgeAdvanced>
                 <Typography variant="caption" sx={{ pl: 1, pr: 1 }}>
-                  Avanzado
+                  {lenguaje == "en" ? "Advanced" : "Avanzado"}
                 </Typography>
               </Box>
             </Paper>
@@ -253,7 +254,7 @@ const Skills = () => {
                 "&.Mui-disabled": {
                   color: "#a5dab4",
                   height: 12,
-                  boxShadow: "0px 8px #0B0F16"
+                  boxShadow: "0px 8px #0B0F16",
                 },
               }}
             />

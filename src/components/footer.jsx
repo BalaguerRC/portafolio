@@ -1,10 +1,30 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const Footer = () => {
+const Footer = ({ lenguaje }) => {
   return (
     <>
-      <Box sx={{ textAlign: "center", position: "static", p: 5 }}>
-        <Typography variant="h7">Designened by Balaguer</Typography>
+      <Box sx={{ position: "static", p: 2 }}>
+        <Grid
+          container
+          direction={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Grid item>
+            <IconButton>
+              <LinkedInIcon />
+            </IconButton>
+          </Grid>
+          <Divider orientation="vertical" flexItem />
+          <Grid item ml={1.5}>
+            <Typography variant="h7">
+              {lenguaje == "en"
+                ? "Designened by Balaguer"
+                : "Diseñado por Balaguer"}
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
     </>
   );

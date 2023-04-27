@@ -1,5 +1,5 @@
 import { Box, Grid, TextField, Button, styled } from "@mui/material";
-import { useRef, useState } from "react";
+import {useState } from "react";
 
 const TextFieldCustom = styled(TextField)({
   "& label.Mui-focused": {
@@ -18,7 +18,7 @@ const TextFieldCustom = styled(TextField)({
   },
 });
 
-const ContactForm = () => {
+const ContactForm = ({lenguaje}) => {
   const [Nam, setName] = useState(0);
   const [LasNam, setLasName] = useState(0);
   const [Email, setEmail] = useState(0);
@@ -33,19 +33,21 @@ const ContactForm = () => {
       <Grid container direction={"row"}>
         <Grid item xs m={1}>
           <TextFieldCustom
-            label="Nombre"
+            label={lenguaje == "en" ? "Name":"Nombre"}
             variant="outlined"
             type="text"
             onChange={(e) => setName(e.currentTarget.value)}
+            placeholder={lenguaje == "en" ? "name...":"nombre..."}
             fullWidth
           />
         </Grid>
         <Grid item xs m={1}>
           <TextFieldCustom
-            label="Apellidos"
+            label={lenguaje == "en" ? "Lastname":"Apellidos"}
             variant="outlined"
             type="text"
             onChange={(e) => setLasName(e.currentTarget.value)}
+            placeholder={lenguaje == "en" ? "lastname...":"apellidos..."}
             fullWidth
           />
         </Grid>
@@ -53,20 +55,22 @@ const ContactForm = () => {
       <Grid container direction={"row"}>
         <Grid item xs sx={{ m: 1 }}>
           <TextFieldCustom
-            label="Email"
+            label="Email @"
             variant="outlined"
             type="email"
             onChange={(e) => setEmail(e.currentTarget.value)}
+            placeholder="example@gmail.com"
             fullWidth
           />
         </Grid>
 
         <Grid item xs sx={{ m: 1 }}>
           <TextFieldCustom
-            label="No."
+            label={lenguaje == "en" ? "Phone":"Numero"}
             variant="outlined"
             type="text"
             onChange={(e) => setNo(e.currentTarget.value)}
+            placeholder="809-12..."
             fullWidth
           />
         </Grid>
@@ -76,9 +80,10 @@ const ContactForm = () => {
           <TextFieldCustom
             multiline
             rows={6}
-            label="Mensaje"
+            label={lenguaje == "en" ? "Message":"Mensaje"}
             fullWidth
             type="text"
+            placeholder={lenguaje == "en" ? "message...":"mensaje..."}
             onChange={(e) => setMessage(e.currentTarget.value)}
           />
         </Grid>
@@ -92,6 +97,7 @@ const ContactForm = () => {
               ":hover": {
                 background: "#a5dab4",
               },
+              borderRadius: 20
             }}
             onClick={() =>
               Response(
@@ -103,7 +109,7 @@ const ContactForm = () => {
               )
             }
           >
-            Publicar
+            {lenguaje == "en" ? "Submit":"Enviar"}
           </Button>
         </Grid>
       </Grid>
