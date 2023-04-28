@@ -18,7 +18,7 @@ const Footer = ({ lenguaje }) => {
             </IconButton>
           </Grid>
           <Grid item>
-            <IconButton>
+            <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
               <LinkedInIcon />
             </IconButton>
           </Grid>

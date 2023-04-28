@@ -57,11 +57,11 @@ const Resumen = ({ lenguaje }) => {
                   Email: balaguerrivera@gmail.com
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "row" }}>
-                  <IconButton>
+                  <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
                     <LinkedInIcon />
                   </IconButton>
                   <IconButton>
-                    <GitHubIcon />
+                    <GitHubIcon href="https://github.com/BalaguerRC"/>
                   </IconButton>
                 </Box>
               </>
@@ -99,7 +99,7 @@ const Resumen = ({ lenguaje }) => {
                   Correo: balaguerrivera@gmail.com
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "row" }}>
-                  <IconButton>
+                  <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
                     <LinkedInIcon />
                   </IconButton>
                   <IconButton href="https://github.com/BalaguerRC">

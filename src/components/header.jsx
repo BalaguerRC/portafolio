@@ -183,7 +183,7 @@ const Header = ({ lenguaje }) => {
                 onClick={() => localStorage.setItem("lenguaje", "es")}
                 href="/"
                 color={lenguaje == "es" ? "#e07400" : "primary"}
-                fontWeight={lenguaje == "es" ? 600 : 400}
+                fontWeight={lenguaje == "es" ? 800 : 400}
               >
                 ES
               </Link>
@@ -193,7 +193,7 @@ const Header = ({ lenguaje }) => {
                 onClick={() => localStorage.setItem("lenguaje", "en")}
                 href="/"
                 color={lenguaje == "en" ? "#e07400" : "primary"}
-                fontWeight={lenguaje == "en" ? 600 : 400}
+                fontWeight={lenguaje == "en" ? 800 : 400}
               >
                 EN
               </Link>
