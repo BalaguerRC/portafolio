@@ -57,11 +57,15 @@ const Resumen = ({ lenguaje }) => {
                   Email: balaguerrivera@gmail.com
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "row" }}>
-                  <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
+                  <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/" sx={{":hover": {
+                      color: "#81CC96"
+                    } }}>
                     <LinkedInIcon />
                   </IconButton>
-                  <IconButton>
-                    <GitHubIcon href="https://github.com/BalaguerRC"/>
+                  <IconButton sx={{":hover": {
+                      color: "#81CC96"
+                    } }}>
+                    <GitHubIcon href="https://github.com/BalaguerRC" />
                   </IconButton>
                 </Box>
               </>
@@ -99,10 +103,24 @@ const Resumen = ({ lenguaje }) => {
                   Correo: balaguerrivera@gmail.com
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "row" }}>
-                  <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
+                  <IconButton
+                    href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/"
+                    sx={{
+                      ":hover": {
+                        color: "#81CC96",
+                      },
+                    }}
+                  >
                     <LinkedInIcon />
                   </IconButton>
-                  <IconButton href="https://github.com/BalaguerRC">
+                  <IconButton
+                    href="https://github.com/BalaguerRC"
+                    sx={{
+                      ":hover": {
+                        color: "#81CC96",
+                      },
+                    }}
+                  >
                     <GitHubIcon />
                   </IconButton>
                 </Box>
@@ -112,14 +130,14 @@ const Resumen = ({ lenguaje }) => {
               sx={{
                 display: { xs: "flex", md: "grid" },
                 flexDirection: "row",
-                justifyContent: {xs: "center", md: "left"},
+                justifyContent: { xs: "center", md: "left" },
               }}
             >
               <Button
                 variant="contained"
                 startIcon={<DownloadOutlinedIcon />}
                 sx={{
-                  width: 100,
+                  width: 150,
                   //width: "100%",
                   borderRadius: 10,
                   p: 1,
@@ -128,12 +146,12 @@ const Resumen = ({ lenguaje }) => {
                   transition: "width .5s",
                   ":hover": {
                     background: "#a5dab4",
-                    width: 150,
+                    width: 200,
                   },
                   boxShadow: "10px 10px #0B0F16",
                 }}
               >
-                CV
+                {lenguaje == "en" ? "Resume" : "Curriculum"}
               </Button>
             </Box>
           </Grid>
@@ -144,13 +162,22 @@ const Resumen = ({ lenguaje }) => {
               justifyContent={"center"}
               alignItems={"center"}
             >
-              <Paper sx={{ borderRadius: 50, boxShadow: "10px 10px #0B0F16" }}>
+              <Paper
+                sx={{
+                  borderRadius: 50,
+                  boxShadow: "10px 10px #0B0F16",
+                  background: "#4B7C59",
+                  borderTopRightRadius: "30%",
+                  borderBottomLeftRadius: "30%",
+                }}
+              >
                 <Avatar
                   alt="example"
-                  src="src/assets/download2.png"
+                  src="src/assets/perfil.jpg"
                   sx={{
                     width: 240,
                     height: 240,
+                    boxShadow: "10px 10px #0B0F16",
                   }}
                 />
               </Paper>

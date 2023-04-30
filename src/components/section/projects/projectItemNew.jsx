@@ -51,7 +51,7 @@ const ProjectItemNew = ({
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Box sx={{ display: "flex", lexWrap: "wrap", mt: 2 }}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2}}>
                 {tecnology &&
                   tecnology.map((item, id) => {
                     return (
@@ -75,7 +75,7 @@ const ProjectItemNew = ({
               mt={2}
               mb={2}
               pl={2}
-              sx={{ display: "grid", justifyContent: "right" }}
+              sx={{ display: "grid", justifyContent: "right",maxWidth: 400, width: "100%"}}
             >
               <Button
                 size="small"
@@ -109,6 +109,7 @@ const ProjectItemNew = ({
                 boxShadow: "10px 10px #0B0F16",
                 ":hover": {
                   boxShadow: "10px 10px #81b395",
+                  borderRadius: 1
                 },
               }}
             >
@@ -130,7 +131,7 @@ const ProjectItemNew = ({
                 maxWidth: 540,
                 width: "100%",
                 borderRadius: 1,
-                background: "#393e4b",
+                background: "#252C3B",
                 boxShadow: "10px 10px #0B0F16",
               }}
             >
@@ -224,7 +225,7 @@ const ProjectItemNew = ({
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Box sx={{ display: "flex", lexWrap: "wrap", mt: 2 }}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                 {tecnology &&
                   tecnology.map((item, id) => {
                     return (
@@ -277,6 +278,7 @@ const ProjectItemNew = ({
                 boxShadow: "10px 10px #0B0F16",
                 ":hover": {
                   boxShadow: "10px 10px #81b395",
+                  borderRadius: 1
                 },
               }}
             >

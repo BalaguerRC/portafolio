@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <header>
-        <Header lenguaje={lenguaje}/>
+        {<Header lenguaje={lenguaje}/>}
       </header>
       <section id="resumen">
         <Resumen lenguaje={lenguaje}/>

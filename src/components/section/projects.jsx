@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import ProjectItemNew from "./projects/projectItemNew";
 import Admin from "../../assets/Admin2.png";
 import Product from "../../assets/Products.png";
+import Portafolio from "../../assets/Portafolio.png";
 
 
 
@@ -31,7 +32,15 @@ const Projects = ({lenguaje}) => {
       description: `${lenguaje == "en" ? "API used in the 'Tienda Producs' and 'Administracion de Tienda Products ' pages." : "API utilizada en las páginas 'Tienda Producs' y 'Administracion de Tienda Producs'."}`,
       image: Admin,
       tecnology: ["ASP.NET", "C#"],
-      repository: "",
+      repository: "https://github.com/BalaguerRC/Proyect_1.git",
+    },
+    {
+      id: 4,
+      title: "Portafolio",
+      description: `${lenguaje == "en" ? "My first web portfolio" : "Mi primer portafolio web"}`,
+      image: Portafolio,
+      tecnology: ["HTML", "Javascript", "React.js", "MaterialUI", "EmailJS"],
+      repository: "https://github.com/BalaguerRC/portafolio.git",
     },
   ];
 

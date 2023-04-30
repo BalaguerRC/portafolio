@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = ({ lenguaje }) => {
   return (
@@ -13,13 +13,27 @@ const Footer = ({ lenguaje }) => {
           alignItems={"center"}
         >
           <Grid item>
-            <IconButton href="https://github.com/BalaguerRC">
-              <GitHubIcon/>
+            <IconButton
+              href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/"
+              sx={{
+                ":hover": {
+                  color: "#81CC96",
+                },
+              }}
+            >
+              <LinkedInIcon />
             </IconButton>
           </Grid>
           <Grid item>
-            <IconButton href="https://www.linkedin.com/in/balaguer-rivera-castillo-a5aab9256/">
-              <LinkedInIcon />
+            <IconButton
+              href="https://github.com/BalaguerRC"
+              sx={{
+                ":hover": {
+                  color: "#81CC96",
+                },
+              }}
+            >
+              <GitHubIcon />
             </IconButton>
           </Grid>
           <Divider orientation="vertical" flexItem />
