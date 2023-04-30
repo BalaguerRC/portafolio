@@ -106,7 +106,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/html.png"
+                  src="src/assets/Html.png"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -123,7 +123,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/js.png"
+                  src="src/assets/Js.png"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -141,7 +141,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/react.svg"
+                  src="src/assets/React.svg"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -158,7 +158,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/net.png"
+                  src="src/assets/Net.png"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -175,7 +175,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/sql.jpg"
+                  src="src/assets/Sql.jpg"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -192,7 +192,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/mui.png"
+                  src="src/assets/Mui.png"
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
