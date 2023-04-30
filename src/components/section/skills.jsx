@@ -5,6 +5,12 @@ import {
   StyledBadgeAdvanced,
   StyledBadgeIntermediate,
 } from "./style/skills";
+import Mui from "../../assetss/Mui.png"
+import Html from "../../assetss/Html.png"
+import Javascript from "../../assetss/Js.png"
+import ReactIMG from "../../assetss/React.png"
+import Asp from "../../assetss/Net.png"
+import Sql from "../../assetss/Sql.png"
 
 // eslint-disable-next-line react/prop-types
 const Skills = ({ lenguaje }) => {
@@ -106,7 +112,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/Html.png"
+                  src={Html}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -123,7 +129,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/Js.png"
+                  src={Javascript}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -141,7 +147,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/React.svg"
+                  src={ReactIMG}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -158,7 +164,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/Net.png"
+                  src={Asp}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -175,7 +181,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/Sql.jpg"
+                  src={Sql}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}
@@ -192,7 +198,7 @@ const Skills = ({ lenguaje }) => {
               <PaperCustom sx={{ p: 1 }}>
                 <img
                   alt="test"
-                  src="src/assets/Mui.png"
+                  src={Mui}
                   width={100}
                   height={100}
                   style={{ borderRadius: 5 }}

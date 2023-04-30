@@ -11,6 +11,7 @@ import {
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Perfil from "../../assetss/Perfil.jpg";
 
 // eslint-disable-next-line react/prop-types
 const Resumen = ({ lenguaje }) => {
@@ -173,7 +174,7 @@ const Resumen = ({ lenguaje }) => {
               >
                 <Avatar
                   alt="example"
-                  src="src/assets/perfil.jpg"
+                  src={Perfil}
                   sx={{
                     width: 240,
                     height: 240,

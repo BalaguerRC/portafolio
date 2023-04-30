@@ -1,9 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
 // import ProjectItem from "./projects/projectItem";
 import ProjectItemNew from "./projects/projectItemNew";
-import Admin from "../../assets/Admin2.png";
-import Product from "../../assets/Products.png";
-import Portafolio from "../../assets/Portafolio.png";
+import Admin from "../../assetss/Admin2.png";
+import Product from "../../assetss/Products.png";
+import Portafolio from "../../assetss/Portafolio.png";
 
 
 
