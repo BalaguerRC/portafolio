@@ -88,21 +88,29 @@ const Header = ({ lenguaje }) => {
                 sx={{
                   display: { xs: "block", md: "none" },
                   ".css-at26bj-MuiPaper-root-MuiMenu-paper-MuiPopover-paper": {
-                    background: "#181d29"
+                    background: "#181d29",
                   },
                 }}
               >
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{lenguaje == "en" ? "Home" : "Inicio"}</Typography>
+                <MenuItem href="#resumen" onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    {lenguaje == "en" ? "Home" : "Inicio"}
+                  </Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{lenguaje == "en" ? "Habilities" : "Habilidades"}</Typography>
+                <MenuItem href="#skills" onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    {lenguaje == "en" ? "Habilities" : "Habilidades"}
+                  </Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{lenguaje == "en" ? "Projects" : "Proyectos"}</Typography>
+                <MenuItem onClick={handleCloseNavMenu} href="#projects">
+                  <Typography textAlign="center">
+                    {lenguaje == "en" ? "Projects" : "Proyectos"}
+                  </Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{lenguaje == "en" ? "Contact" : "Contacto"}</Typography>
+                <MenuItem onClick={handleCloseNavMenu} href="#contact">
+                  <Typography textAlign="center">
+                    {lenguaje == "en" ? "Contact" : "Contacto"}
+                  </Typography>
                 </MenuItem>
               </Menu>
             </Box>

@@ -222,7 +222,7 @@ const Skills = ({ lenguaje }) => {
                 gutterBottom
                 sx={{ color: "#81CC96" }}
               >
-                Fron-End
+                Front-End
               </Typography>
               <Typography
                 variant="subtitle"

@@ -12,6 +12,7 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Perfil from "../../assetss/Perfil.jpg";
+import ResumePDF from "../../assetss/Desarrollo de Software,BalaguerRC (1).pdf";
 
 // eslint-disable-next-line react/prop-types
 const Resumen = ({ lenguaje }) => {
@@ -39,16 +40,15 @@ const Resumen = ({ lenguaje }) => {
                   gutterBottom
                   textAlign={"justify"}
                 >
-                  I am a graduate of the Software Development Technologist
-                  career at the {""}
+                  Graduated from the {""}
                   <Link href="https://itla.edu.do/" underline="hover">
                     Instituto Tecnologico de las Americas (ITLA)
-                  </Link>
-                  , I really like programming and web development, currently I
-                  have little experience in the workplace, so I am looking for
-                  more experience and continue learning. I want to use my
-                  programming skills to collaborate with teams and create
-                  efficient and quality solutions.
+                  </Link> {""}
+                  as a Software Development Technologist. I am passionate about programming 
+                  and web development.Currently I have little experience in the work 
+                  environment, so I am looking to gain more experience and continue learning.
+                  I am always willing to share my knowledge and work in a team creating efficient 
+                  and quality solutions.
                 </Typography>
                 <Typography
                   variant="subtitle2"
@@ -84,17 +84,15 @@ const Resumen = ({ lenguaje }) => {
                   gutterBottom
                   textAlign={"justify"}
                 >
-                  Soy, egredado de la carrera Tecnologo en Desarrollo de
-                  Software del{" "}
+                  Egresado del {" "}
                   <Link href="https://itla.edu.do/" underline="hover">
                     Instituto Tecnologico de las Americas (ITLA)
-                  </Link>
-                  , me gusta mucho la programacion y el ambito de desarrollo
-                  web, actualmente tengo poca experiencia en el ambito laboral,
-                  por lo cual, busco obtener mas experiencia y seguir
-                  aprendiendo. Deseo utilizar mis conocimientos de programacion
-                  para colaborar con equipos y crear soluciones eficientes y de
-                  calidad.
+                  </Link> {""}
+                  como Tecnólogo en Desarrollo de Software. Me apasiona la programación y el 
+                  desarrollo de páginas web. Actualmente cuento con poca experiencia en el ámbito
+                  laboral, por lo que busco adquirir más experiencia y seguir aprendiendo. 
+                  Siempre estoy dispuesto a compartir mis conocimientos y trabajar en equipo
+                  creando soluciones eficientes y de calidad.
                 </Typography>
                 <Typography
                   variant="subtitle2"
@@ -137,6 +135,7 @@ const Resumen = ({ lenguaje }) => {
               <Button
                 variant="contained"
                 startIcon={<DownloadOutlinedIcon />}
+                href={ResumePDF}
                 sx={{
                   width: 150,
                   //width: "100%",
