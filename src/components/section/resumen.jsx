@@ -12,7 +12,7 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Perfil from "../../assetss/Perfil.jpg";
-import ResumePDF from "../../assetss/Desarrollo de Software_BalaguerRC (1).pdf";
+import ResumePDF from "../../assetss/Desarrollo de Software,BalaguerRC (2).pdf";
 
 // eslint-disable-next-line react/prop-types
 const Resumen = ({ lenguaje }) => {
