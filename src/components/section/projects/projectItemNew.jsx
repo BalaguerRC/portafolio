@@ -1,4 +1,5 @@
 import {
+  Badge,
   Box,
   Button,
   CardMedia,
@@ -9,6 +10,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
+
 const ProjectItemNew = ({
   id,
   title,
@@ -17,6 +19,7 @@ const ProjectItemNew = ({
   tecnology,
   repository,
   lenguaje,
+  typeP,
 }) => {
   const [validate, setValidate] = useState(false);
 
@@ -41,17 +44,27 @@ const ProjectItemNew = ({
           <Grid
             item
             sx={{
-              display: { xs: "none", md: "grid" },
+              display: {
+                xs: "none",
+                md: "grid",
+              },
             }}
           >
-            <Box pl={2} pt={2} sx={{ maxWidth: 400, width: "100%" }}>
+            <Box
+              pl={2}
+              pt={2}
+              sx={{
+                maxWidth: 400,
+                width: "100%",
+              }}
+            >
               <Typography gutterBottom variant="h5" component="div">
                 {title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {description}
               </Typography>
-              <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2}}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
                 {tecnology &&
                   tecnology.map((item, id) => {
                     return (
@@ -75,11 +88,17 @@ const ProjectItemNew = ({
               mt={2}
               mb={2}
               pl={2}
-              sx={{ display: "grid", justifyContent: "right",maxWidth: 400, width: "100%"}}
+              sx={{
+                display: "grid",
+                justifyContent: "right",
+                maxWidth: 400,
+                width: "100%",
+              }}
             >
               <Button
                 size="small"
                 variant="contained"
+                target="_blank"
                 href={repository}
                 sx={{
                   p: 1,
@@ -104,26 +123,42 @@ const ProjectItemNew = ({
               display: { xs: "none", md: "flex" },
             }}
           >
-            <Box
+            <Badge
+              badgeContent={typeP == 1 ? "API" : "WEBSITE"}
+              color="success"
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
               sx={{
-                boxShadow: "10px 10px #0B0F16",
-                ":hover": {
-                  boxShadow: "10px 10px #81b395",
-                  borderRadius: 1
+                ".css-1v1h8db-MuiBadge-badge": {
+                  fontSize: "0.95rem",
+                  p: "0 19px",
+                  background: "#44b700",
                 },
               }}
             >
-              <img
-                src={image}
-                style={{
-                  maxWidth: 540,
-                  width: "100%",
-                  maxHeight: 480,
-                  height: "100%",
-                  borderRadius: 5,
+              <Box
+                sx={{
+                  boxShadow: "10px 10px #0B0F16",
+                  ":hover": {
+                    boxShadow: "10px 10px #81b395",
+                    borderRadius: 1,
+                  },
                 }}
-              />
-            </Box>
+              >
+                <img
+                  src={image}
+                  style={{
+                    maxWidth: 540,
+                    width: "100%",
+                    maxHeight: 480,
+                    height: "100%",
+                    borderRadius: 5,
+                  }}
+                />
+              </Box>
+            </Badge>
           </Grid>
           <Grid item sx={{ display: { xs: "flex", md: "none" } }}>
             <Paper
@@ -135,18 +170,32 @@ const ProjectItemNew = ({
                 boxShadow: "10px 10px #0B0F16",
               }}
             >
-              <CardMedia>
-                <img
-                  src={image}
-                  style={{
-                    maxWidth: 540,
-                    width: "100%",
-                    maxHeight: 480,
-                    height: "100%",
-                    borderRadius: 5,
-                  }}
-                />
-              </CardMedia>
+              <Badge
+                badgeContent={typeP == 1 ? "API" : "WEBSITE"}
+                color="success"
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                sx={{
+                  ".css-1k15tnj-MuiBadge-badge": {
+                    background: "#44b700",
+                  },
+                }}
+              >
+                <CardMedia>
+                  <img
+                    src={image}
+                    style={{
+                      maxWidth: 540,
+                      width: "100%",
+                      maxHeight: 480,
+                      height: "100%",
+                      borderRadius: 5,
+                    }}
+                  />
+                </CardMedia>
+              </Badge>
               <Box p={2}>
                 <Typography
                   gutterBottom
@@ -187,6 +236,7 @@ const ProjectItemNew = ({
               <Box p={2}>
                 <Button
                   size="small"
+                  target="_blank"
                   href={repository}
                   variant="contained"
                   sx={{
@@ -215,10 +265,20 @@ const ProjectItemNew = ({
           <Grid
             item
             sx={{
-              display: { xs: "none", md: "grid" },
+              display: {
+                xs: "none",
+                md: "grid",
+              },
             }}
           >
-            <Box pr={2} pt={2} sx={{ maxWidth: 400, width: "100%" }}>
+            <Box
+              pr={2}
+              pt={2}
+              sx={{
+                maxWidth: 400,
+                width: "100%",
+              }}
+            >
               <Typography gutterBottom variant="h5" component="div">
                 {title}
               </Typography>
@@ -249,6 +309,7 @@ const ProjectItemNew = ({
               <Button
                 size="small"
                 variant="contained"
+                target="_blank"
                 href={repository}
                 sx={{
                   p: 1,
@@ -258,7 +319,7 @@ const ProjectItemNew = ({
                   transition: "width .5s",
                   ":hover": {
                     background: "#a5dab4",
-                    width: 250
+                    width: 250,
                   },
                   boxShadow: "10px 10px #0B0F16",
                 }}
@@ -273,26 +334,42 @@ const ProjectItemNew = ({
               display: { xs: "none", md: "flex" },
             }}
           >
-            <Box
+            <Badge
+              badgeContent={typeP == 1 ? "API" : "WEBSITE"}
+              color="success"
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
               sx={{
-                boxShadow: "10px 10px #0B0F16",
-                ":hover": {
-                  boxShadow: "10px 10px #81b395",
-                  borderRadius: 1
+                ".css-1k15tnj-MuiBadge-badge": {
+                  fontSize: "0.95rem",
+                  p: "0 19px",
+                  background: "#44b700",
                 },
               }}
             >
-              <img
-                src={image}
-                style={{
-                  maxWidth: 540,
-                  width: "100%",
-                  maxHeight: 480,
-                  height: "100%",
-                  borderRadius: 5,
+              <Box
+                sx={{
+                  boxShadow: "10px 10px #0B0F16",
+                  ":hover": {
+                    boxShadow: "10px 10px #81b395",
+                    borderRadius: 1,
+                  },
                 }}
-              />
-            </Box>
+              >
+                <img
+                  src={image}
+                  style={{
+                    maxWidth: 540,
+                    width: "100%",
+                    maxHeight: 480,
+                    height: "100%",
+                    borderRadius: 5,
+                  }}
+                />
+              </Box>
+            </Badge>
           </Grid>
           <Grid item sx={{ display: { xs: "flex", md: "none" } }}>
             <Paper
@@ -304,18 +381,32 @@ const ProjectItemNew = ({
                 boxShadow: "10px 10px #0B0F16",
               }}
             >
-              <CardMedia>
-                <img
-                  src={image}
-                  style={{
-                    maxWidth: 540,
-                    width: "100%",
-                    maxHeight: 480,
-                    height: "100%",
-                    borderRadius: 5,
-                  }}
-                />
-              </CardMedia>
+              <Badge
+                badgeContent={typeP == 1 ? "API" : "WEBSITE"}
+                color="success"
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                sx={{
+                  ".css-1k15tnj-MuiBadge-badge": {
+                    background: "#44b700",
+                  },
+                }}
+              >
+                <CardMedia>
+                  <img
+                    src={image}
+                    style={{
+                      maxWidth: 540,
+                      width: "100%",
+                      maxHeight: 480,
+                      height: "100%",
+                      borderRadius: 5,
+                    }}
+                  />
+                </CardMedia>
+              </Badge>
               <Box p={2}>
                 <Typography
                   gutterBottom
@@ -356,6 +447,7 @@ const ProjectItemNew = ({
               <Box p={2}>
                 <Button
                   size="small"
+                  target="_blank"
                   href={repository}
                   variant="contained"
                   sx={{
